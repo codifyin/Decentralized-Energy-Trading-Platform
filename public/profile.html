@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Energy Source Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Energy Source Marketplace</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="registration.html" id="nav-register">Register</a>
+        <a href="login.html" id="nav-login">Login</a>
+        <a href="profile.html" id="nav-profile">Profile</a>
+        <a href="#" id="nav-logout" onclick="logout()">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Profile</h2>
+      <div class="card" id="user-info">
+        <p id="user-name">Loading...</p>
+        <p id="user-role"></p>
+        <p id="energy-balance"></p>
+      </div>
+
+      <div id="provider-section" style="display: none;">
+        <h3>Your Listings</h3>
+        <div class="card" id="my-listings"></div>
+
+        <h3>Create New Listing</h3>
+        <div class="card">
+          <input type="number" id="energy-amount" placeholder="Energy amount">
+          <input type="text" id="price-per-unit" placeholder="Price per unit (ETH)">
+          <label for="energy-type">Energy type:</label>
+          <select id="energy-type">
+            <option value="Solar">Solar</option>
+            <option value="Wind">Wind</option>
+            <option value="Hydro">Hydro</option>
+            <option value="Electric">Electric</option>
+            <option value="Geothermal">Geothermal</option>
+            <option value="Nuclear">Nuclear</option>
+          </select>
+          <button onclick="createListing()">Create Listing</button>
+          <p class="message" id="provider-message"></p>
+        </div>
+      </div>
+
+      <div id="consumer-section" style="display: none;">
+        <h3>Energy Market</h3>
+        <div class="card" id="listings"></div>
+        <p class="message" id="consumer-message"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Amirzhan Issa and Oleg Stelvaga from IT-2204; Astana IT University; 2024</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
