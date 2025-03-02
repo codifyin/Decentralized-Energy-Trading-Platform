@@ -1,0 +1,16 @@
+{
+  "name": "decentralized-energy-trading-platform",
+  "version": "1.0.0",
+  "description": "```\r Decentralized energy trading platform\r ├─ energy-trading-platform\r │  ├─ package-lock.json\r │  ├─ package.json\r │  └─ server.js\r └─ public\r    ├─ app.js\r    ├─ contracts\r    │  └─ EnergyTrading.json\r    ├─ index.html\r    └─ styles.css",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
